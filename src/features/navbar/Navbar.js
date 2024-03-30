@@ -5,6 +5,7 @@ import {
   ShoppingCartIcon,
   XMarkIcon,
 } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -69,17 +70,18 @@ export default function Navbar() {
                   type="button"
                   className="mr-4 relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  {/* <span className="absolute -inset-1.5" /> */}
-                  <div className="absolute top-0 left-3">
-                    <p className="ml-2 flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">
-                      3
-                    </p>
-                  </div>
-                  <ShoppingCartIcon
-                    className="h-6 w-6 mt-4"
-                    aria-hidden="true"
-                  />
-                  {/* <span className="text-red-500 text-lg font-bold">3</span> */}
+                  <Link to="/cart">
+                    <div className="absolute top-0 left-3">
+                      <p className="ml-2 flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">
+                        3
+                      </p>
+                    </div>
+                    <ShoppingCartIcon
+                      className="h-6 w-6 mt-4"
+                      aria-hidden="true"
+                    />
+                    {/* <span className="text-red-500 text-lg font-bold">3</span> */}
+                  </Link>
                 </button>
 
                 {/* Profile dropdown */}
